@@ -1,0 +1,29 @@
+ALGORITHM Dot_product
+FUNCTION  dot_product(VAR V1,V2 : ARRAY_OF FLOAT[]) : FLOAT
+VAR
+    i,j:INTEGER;
+    n1:=V1.length;
+    n2:=V2.length;
+    sum:=0:FLOAT;
+BEGIN
+WHILE (n1=n2) DO
+    FOR i FROM 0 TO max n1-1 step  DO
+        sum:=sum+V1[i]*V2[i] ;
+    END_FOR
+END_WHILE
+    
+    RETURN sum ;
+END
+VAR
+    i,j,n:INTEGER;
+    l:=V.length:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n STEP step  DO
+    FOR j FROM i+1 TO n-1 STEP step  DO
+        sum:=dot_product(V[i],V[j])
+        IF (sum=0) THEN
+            whrite(V[i]andV[j] are orthogonal)
+        END_IF
+    END_FOR
+    END_FOR
+END
